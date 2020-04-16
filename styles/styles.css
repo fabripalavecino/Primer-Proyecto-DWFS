@@ -1,0 +1,696 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.encabezado {
+    width: 90%;
+    text-align: left;
+    color: #060A24;
+    font-weight: normal;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+}
+
+.introduccion {
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: #060A24;
+    font-weight: lighter;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    margin-top: 16px;
+    margin-bottom: 36px;
+
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 700px) {
+
+
+    .menu {
+        width: 100%;
+        height: 44px;
+        padding: 5px 10px;
+        line-height: 20px;
+    }
+    .logo{
+        margin-top: 7px;
+    }
+
+    /*Make dropdown links appear inline*/
+
+    nav ul {
+        position: fixed;
+        display: none;
+        margin-top: 37px;
+    }
+
+    #show-menu:checked+nav ul {
+        display: block;
+        border-radius: 15px;
+        -webkit-box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.5);
+                box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.5);
+    }
+
+    /*Create vertical spacing*/
+    nav li {
+        margin-bottom: 1px;
+        width: 100%;
+        margin: 0;
+
+    }
+
+    /*Make all menu links full width*/
+    nav ul li,
+    nav li a {
+        width: 100%;
+    }
+
+    /*Display 'show menu' link*/
+    .show-menu {
+        display: block;
+    }
+}
+
+.page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.section {
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    background-color: #FFF;
+    width: 100%;
+}
+
+.header {
+    background-color: #FFF;
+    display: block;
+    height: auto;
+    margin: 22px;
+    padding-bottom: 40px;
+}
+
+.episodios {
+    background: -webkit-gradient(linear, left top, left bottom, from(#0000FF), to(#0000A3));
+    background: linear-gradient(to bottom, #0000FF, #0000A3);
+    height: 1214px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+            clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+
+}
+
+.fab {
+    color: black;
+}
+
+.feature-1 {
+    background-color: #FFFFFF;
+    height: 335px;
+}
+
+.feature-2 {
+    background-color: #FFFFFF;
+    padding-top: 27px;
+}
+
+.feature-3,
+.feature-4,
+.feature-5 {
+    background-color: #FFFFFF;
+}
+
+.feature-6 {
+    height: 341px;
+    -webkit-clip-path: polygon(0 9%, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 9%, 100% 0, 100% 100%, 0 100%);
+}
+
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    .page {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+    .header {
+        height: 400px;
+    }
+}
+
+.content {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+}
+
+ul.recipe {
+    margin-left: 150px;
+    margin-right: 150px;
+    line-height: 150%;
+}
+
+nav ul {
+    font-family: 'IBM Plex Mono', monospace;
+    /* removing bullets, margins and padding for navigation bar */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /*background color of navigaton bar */
+    overflow: hidden;
+    background-color: #0000EC;
+    /* fixed top, also when user scrolls the page */
+    top: 44px;
+    right: 0px;
+    width: 60%;
+    float: right;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    /* formatting links in the navigation bar*/
+    font-family: 'IBM Plex Mono', monospace;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav li a:hover {
+    /*changing the link color on non active links on hover*/
+    background-color: rgb(0, 0, 155);
+    color: #FFFFFF;
+}
+
+.active {
+    /*showing to user which link is active*/
+    background-color: #0000EC
+}
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+    font-family: 'IBM Plex Mono', monospace;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 0px;
+    margin: 0;
+    top: 0;
+    width: 35px;
+    float: right;
+    font-weight: bolder;
+    font-size: large;
+}
+
+/*Hide checkbox*/
+input[type=checkbox] {
+    display: none
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked~#menu {
+    display: block;
+
+}
+
+.botones {
+    background-color: #00F3BB;
+    height: 48px;
+    width: 288px;
+    padding: 9px 13px;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #060A24;
+    font-size: 16px;
+    font-weight: bold;
+    border-width: 0px;
+}
+
+.botones:hover {
+    background: -webkit-gradient(linear, right top, left top, from(#0000FE), to(#00F0B8));
+    background: linear-gradient(to left, #0000FE, #00F0B8);
+    color: #FFFFFF;
+}
+
+.ep {
+    font-size: 36px;
+    font-weight: lighter;
+    color: #FFFFFF;
+    font-family: 'IBM Plex Sans', sans-serif;
+    position: relative;
+    padding-left: 16px;
+    padding-right: 147px;
+    padding-top: 64px;
+    padding-bottom: 21px;
+    display: block;
+
+}
+
+.reproductores {
+    border: none;
+    background-color: transparent;
+    width: 90%;
+    height: 31%;
+    padding-left: 14px;
+    padding-right: 10px;
+
+}
+
+#ultimo-rep {
+    padding-bottom: 143.5px;
+}
+
+#image-seccion {
+    width: 354px;
+    height: 445px;
+    position: relative;
+    top: -105px;
+
+}
+
+#central {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.text-sec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #060A24;
+    font-size: 36px;
+    padding-left: 5%;
+    font-weight: normal;
+}
+
+#parrafo-medio {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: #060A24;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+}
+
+.seg {
+    padding-top: 54px;
+    padding-bottom: 14px;
+}
+
+.invitados {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.box-images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 13px;
+    margin: 7px;
+}
+
+.text-img {
+    font-family: 'IBM Plex Sans-SemiBold', sans-serif;
+    color: #060A24;
+    font-size: 24px;
+    padding-top: 13px;
+    padding-bottom: 52px;
+}
+
+#titulo-temas {
+    padding-top: 48px;
+    padding-bottom: 24px;
+    width: 80%;
+}
+
+#ultimo-boton {
+    position: relative;
+    margin-bottom: 67px;
+
+}
+
+#novedades {
+    text-align: center;
+    padding-right: unset;
+    padding-left: unset;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 15px;
+}
+
+.last-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center
+}
+
+footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 45px;
+    margin-right: 45px;
+}
+
+.icons {
+    font-family: FontAwesome5Brands-Regular;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-bottom: 31px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+#box-hello {
+    text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: #060A24;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+#hello {
+    font-weight: lighter;
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 700px) {
+    body {
+        background-color: #FFFFFF
+    }
+
+    #show-menu {
+        display: none;
+    }
+
+    .show-menu {
+        display: none;
+    }
+
+    #menu {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        background-color: #FFFFFF;
+        color: #060A24;
+        width: auto;
+    }
+
+    .active {
+        background-color: #FFFFFF;
+
+    }
+
+    nav li a {
+        color: #060A24;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        font-size: 16px;
+    }
+
+    .menu {
+        padding: 1% 5%;
+        background-color: #FFF;
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        line-height: 26px;
+    }
+
+    .logo {
+        width: 36px;
+        height: 36px;
+        margin-top: 0;
+    }
+
+    .encabezado {
+        margin-top: 10%;
+        font-size: 64px;
+    }
+
+    .point {
+        color: #0000EC;
+
+    }
+
+    .header {
+        padding-left: 10%;
+    }
+
+    h4.introduccion {
+        visibility: hidden;
+        width: 70%;
+        font-size: 16px;
+        text-align: unset;
+    }
+
+    h4.introduccion:before {
+        content: "El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días. ";
+        visibility: visible;
+    }
+
+    .episodios {
+        height: 1042.5px;
+        -webkit-clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
+                clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
+    }
+
+    #box-episodios {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+
+    }
+
+    .ep {
+        font-size: 48px;
+        padding-left: 10%;
+        padding-top: 10%;
+        padding-bottom: 2%;
+    }
+
+    .reproductores {
+        width: 40%;
+        height: 60%;
+     
+    }
+
+    .text-sec {
+        font-size: 48px;
+        width: 100%;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    }
+
+    #parrafo-medio {
+        font-size: 16px;
+        padding-top: 5%;
+        text-align: justify;
+    }
+
+    #image-seccion {
+        top: -178px;
+        width: 457.6px;
+        height: 660px;
+        padding-left: 15%;
+    }
+
+    #central {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        padding-bottom: 10%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .feature-2 {
+        width: 33%;
+    }
+
+    .feature-1 {
+        width: 50%;
+    }
+
+    .text-sec {
+        padding-left: 2%;
+    }
+
+    .divisor-imagenes {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+
+    .siwrap {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+
+    .invitados {
+        -webkit-box-ordinal-group: 0;
+            -ms-flex-order: -1;
+                order: -1;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 33.33%;
+                flex: 0 1 33.33%;
+        width: 33.33%;
+    }
+
+    #gran-caja {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    .box-images {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        width: 15%;
+    }
+
+    .feature-6 {
+        -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: 90%;
+    }
+
+    #novedades {
+        font-size: 48px;
+    }
+
+    footer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+
+    .icons {
+        font-size: 18px;
+        margin: 0;
+        width: 25%;
+    }
+
+}
